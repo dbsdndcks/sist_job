@@ -1,0 +1,29 @@
+package day0208;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+/**
+ * 소켓을 생성하여 서버에 연결 하는일 
+ */
+public class TestClient {
+	
+	public TestClient() throws UnknownHostException, IOException {
+		//1. Socket 생성 ) 설정한 IP와 port로 서버에 연결
+		Socket client = new Socket("192.168.10.210",35000);
+		System.out.println("서버 연결에 성공");
+	}
+	
+	public static void main(String[] args) {
+		try {
+			new TestClient();
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

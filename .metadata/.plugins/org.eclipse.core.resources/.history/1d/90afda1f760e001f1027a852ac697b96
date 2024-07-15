@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    info="AJAX에서 보내오는 parameter 받기"%>
+  
+<jsp:useBean id="lVO" class="kr.co.sist.user.member.LoginVO" scope="page" />
+<jsp:setProperty property="*" name="lVO"/>

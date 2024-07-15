@@ -1,0 +1,61 @@
+package day0131work;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
+@SuppressWarnings("serial")
+public class MemoFontDesign extends JDialog{
+	private JTextField jtfFont,jtfStyle,jtfSize;
+	private JList<String> jlfont,jlStyle,jlSize;
+	private DefaultListModel<String>dlmFont,dlmStyle,dlmSize;
+	private JLabel jlPreview;
+	private JButton jbtnCheck,jbtnCancel;
+	private JavaMemoDesign jmd = new JavaMemoDesign();
+	 
+	
+
+	public MemoFontDesign(JavaMemoDesign jmd) {
+		super(jmd, "글꼴", false);
+        setPreview();
+        
+        
+      	//이벤트 등록
+        MemoFontEvent mfe = new MemoFontEvent(this,jmd);
+        addWindowListener(mfe);
+        jlfont.addMouseListener(mfe);
+        jlStyle.addMouseListener(mfe);
+        jlSize.addMouseListener(mfe);
+        jbtnCheck.addActionListener(mfe);
+        jbtnCancel.addActionListener(mfe);
+        
+        setLayout(null);
+        setResizable(false);
+        setSize(480, 300);
+        setVisible(true);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+
+    public void setPreview() {
+  
+        // JTextArea에서 현재 폰트 세부 정보 가져오기
+        String jmdFontName = jmd.getJta().getFont().getFamily();
+        int jmdFontStyle = jmd.getJta().getFont().getStyle();
+        int jmdFontSize = jmd.getJta().getFont().getSize();
+        
+        //==========버튼============
+        jbtnCheck = new JButton("확인");
+        jbtnCancel = new JButton("취소");
+        jbtnCheck.setBounds(300, 200, 70, 30); // 예상 크기에 맞게 수정
+        jbtnCancel.setBounds(380, 200, 70, 30); // 예상 크기에 맞게 수정
+
+        add(jbtnCheck);

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	td{width: 140px; height: 40px; text-align: center; border: 1px dotted #333; font-weight: bold;}
+	.even{background-color: #dfdfdf;}
+	.odd{background-color: #474747;}
+	
+	td:hover{background-color: #3943; font-size: 20px; cursor: pointer;}
+</style>
+<script type="text/javascript">
+	//h1~h6까지 태그 생성하여 출력
+	for(var i = 1; i < 7 ; i++){
+		document.write("<h" +i +">" +" 안녕하세용" + "</h" +i +">");
+	}
+	
+		document.write("<table>")
+		for (let i = 1; i < 10; i++) {
+			if (i % 2 != 0) {
+				document.write("<tr class=even>")
+				document.write("<td>" + i + "</td>")
+				document.write("</tr>")
+			}else{
+				document.write("<tr class=odd>")
+				document.write("<td>" + i + "</td>")
+				document.write("</tr>")				
+			}			
+		}
+	document.write("</table>")
+	
+	
+		document.write("<table>")
+		for (let i = 1; i < 10; i++) {
+				document.write("<tr>")
+			for (let j = 2; j < 10; j++) {
+				if(j % 2 == 0 ){
+				document.write("<td class=even>" + j + " X " + i + " = " + (j * i) + "</td>")					
+				}else{
+				document.write("<td class=odd>" + j + " X " + i + " = " + (j * i) + "</td>")										
+				}
+			}
+				document.write("</tr>")
+		}
+
+		document.write("</table>")
+</script>
+</head>
+<body>
+
+</body>
+</html>

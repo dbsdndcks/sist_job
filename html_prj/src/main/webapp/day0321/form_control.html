@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Form Control</title>
+</head>
+<body>
+	<form action="request.jsp">
+		<fieldset>
+	<div>
+		<strong>inpur tag</strong>
+	</div>
+	<div>
+		그냥 <input><br>
+		아이디<input type="text" name="">
+	</div>
+	<div>
+		<label>속성없는 태그</label><input><br>
+		<label>아이디</label>
+		<input type="text" name="id" id="id" class="id" placeholder="아이디 입력" 
+		maxlength="10" size="4"><br/>
+	
+		<label>읽기전용</label>
+		<!--리드온리 속성이 설정된 폼 컨트롤의 값은 백엔드로 전송된다-->
+		<input type="text" name="read" id="read" class="read" readonly="readonlry" 
+		value="써보던가 ㅋㅋ"><br/>
+	
+		<label>비활성화</label>
+		<!--디스에이블 설정된 폼 컨트롤의 값은 백엔드로 전송 되지 않는다 -->
+		<input type="text" name="read" id="read" class="read" disabled="disable" 
+		value="써보던가 ㅋㅋ"><br/>
+	
+		<label>비밀번호</label>
+		<input type="password" name="read" id="read" class="read"  placeholder="비밀번호입력" 
+		value="써보던가 ㅋㅋ"><br/>
+	
+		<label>체크박스</label>
+		<input type="checkbox" name="ch" id="ch" class="ch"   
+		value="save"><br/>
+		
+		<label>라디오박스</label>
+		<input type="radio" name="m" id="m" class="m"   
+		value="m" checked="checked"><label>남자</label>		
+		<input type="radio" name="f" id="f" class="f"  value="fm" checked="checked"><label>여자</label>		
+		<br/>
+	
+		<label>히든</label>
+		<input type="hidden" name="ch" id="ch" class="ch"   
+		value="save"><br/>
+	
+		<label>파일</label>
+		<input type="랴ㅣㄷ" name="ch" id="ch" class="ch"   
+		value="save"><br/>
+	
+		<label>버튼 모양</label>
+		<input type="submit" name="btn" id="ch" class="ch"   
+		value="submit"><br/>
+		
+		
+	</div>
+	<div>
+		<div><strong>textarea</strong></div>
+		<div>
+			<textarea name ="ta" id="ta" class="ta">보여줄 문자열</textarea>
+		</div>
+	</div>
+	</fieldset>
+	</form>
+
+</body>
+</html>

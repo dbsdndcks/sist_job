@@ -1,0 +1,26 @@
+package day0208;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+/*
+ * 포트를 열어서 접속자 소케을 받는 서버구현
+ */
+public class TestServer {
+
+	public TestServer() {
+		//1. ServerSocket 생성 )- TCP/IP를 사용
+		try {
+			ServerSocket serverSocket = new ServerSocket(35000);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}//TestServer
+	
+	public static void main(String[] args) {
+		new TestServer();
+		
+	}//main
+
+}//class

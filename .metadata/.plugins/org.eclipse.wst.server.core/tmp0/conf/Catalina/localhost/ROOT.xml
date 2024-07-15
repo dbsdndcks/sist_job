@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="C:\E\dev\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps" path="" reloadable="true" source="org.eclipse.jst.jee.server:">
+	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/dbcp" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:orcl" username="scott"/>
+	</Context>

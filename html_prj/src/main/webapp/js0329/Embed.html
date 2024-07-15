@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.btn {
+		border: 1px solid #333;
+		background-color: skyblue;
+		font-weight: bold;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	div{font-weight: bold; border: 1px solid #333;
+	border-radius: 10px; padding: 10px; box-shadow: 10px 10px 10px #333;
+	width: 400px; height: 200px; margin-top: 30px;}
+	
+</style>
+</head>
+<body>
+오늘의 요일은? <input type="button" value="확인" class="btn" onclick="setText('마파두부 마라탕 탕수육 삼겹살 방어회 새우 장어 꼼장어 평양냉면 맛잇겠다')">
+<div id="output"></div>
+<script type="text/javascript">
+	//embed방식
+	function setText(text){
+		var divNode = document.getElementById("output");
+		if(flag=2){
+		text="<marquee scrollamount='999'>"+ text+"</marguee>";
+		}
+		divNode.innerHTML=text;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+package day0208;
+
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class SimpleServer {
+
+	public void msgServer() throws IOException {
+		//1. 서버소켓 생성
+		ServerSocket server = null;
+		Socket client = null;
+		DataOutputStream dos = null;
+		try {
+			server = new ServerSocket(7770);
+		}
+		finally {
+			if(dos != null) {dos.close();}
+			if(client != null) {client.close();}
+			if(server != null) {server.close();}
+		}//end finally
+	}//msgServer
+	
+	public static void main(String[] args) {
+		SimpleServer ss = new SimpleServer();
+		try {
+			ss.msgServer();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}//main
+
+}//class

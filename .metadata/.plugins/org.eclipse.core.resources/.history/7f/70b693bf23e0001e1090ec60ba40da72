@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>상대경로</h2>
+	<a href = "img.html">이미지</a><br/>
+	<a href = "../day0311/font.html">day0311/font.html과 연결</a><br/>
+	<a href = "../day0311/font.html">day0311/font.html과 연결</a><br/>
+	<h2>다양한 기능</h2>
+	관리자에게 메일을 <img src = ""
+	<a href = "mailto:admin@test.com">메일보내기</a>
+</body>
+</html>

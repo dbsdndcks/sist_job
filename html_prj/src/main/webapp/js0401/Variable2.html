@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	//상수 (변수의 값 변경 불가)
+	const msg="JavaScript";
+	document.write(msg + "<br>");
+//	msg = "c언어";
+//	document.write(msg + "<br>"); const여서 값할당 불가
+	
+	 var temp = "같은 이름의 변수";
+	 var temp = "같은 이름의 변수2"; //var는 같은 이름의 변수(msg)를 여러개 선언가능
+	 document.write(temp); //가능
+	 
+	// let temp = "같은 이름의 변수2"
+	// document.write(temp); //불가능 // 에러 나옴
+	
+	alert(msg2)  //아래에 선언된 변수를 위에서 사용하는것.  => 에러발생시킬수있다
+	var msg2="쉬었따가 고곡";
+	
+	alert(msg3) //아랫 줄의 변수를 위에서 끌여다 쓸수 없다.
+	let msg3="호이스팅 막기";
+</script>
+</head>
+<body>
+
+</body>
+</html>

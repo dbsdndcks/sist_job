@@ -1,0 +1,31 @@
+class UseLocalVariable{
+
+	//main method: 클래스를 단독으로 실행 시켜야 할 때 정의하는 method
+	//단독으로 실행가능한 프로그램 : java application
+	
+	public static void main(String[] args){
+
+	
+	
+	//<지역변수>
+	//1.선언:  데이터형 변수명;
+		
+		int i;
+		String a;
+		Long num;
+
+	//2.값할당: 변수명 = 값;
+
+		i = 0;			
+		a = "abc"
+		num = 1237892749;
+			
+	//3.값사용: 출력
+	
+		System.out.println(i);
+		System.out.println(a);
+		System.out.println(num);
+
+	
+	}
+}

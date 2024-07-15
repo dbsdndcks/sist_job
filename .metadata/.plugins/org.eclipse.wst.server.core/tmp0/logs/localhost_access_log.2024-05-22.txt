@@ -1,0 +1,5 @@
+127.0.0.1 - - [22/May/2024:10:38:17 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/May/2024:10:38:17 +0900] "GET /mybatis_prj/WEB-INF/classes/properties/database.properties HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [22/May/2024:10:38:17 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+127.0.0.1 - - [22/May/2024:10:38:43 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/May/2024:10:38:43 +0900] "GET /mybatis_prj/WEB-INF/classes/day0522/mybatis-config.xml HTTP/1.1" 404 721

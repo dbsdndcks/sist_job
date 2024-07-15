@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{width: 1000px; height: 1200px; margin:0px auto;}
+	#header{height: 200px; }
+	
+	#container{height: 900px; position: relative; background-color: red;}
+	#left{width: 300px; height: 200px; position: absolute;top: 40px; left: 60px; background-color: beige; }
+	#right{width: 400px; height: 100px;position: absolute;top: 650px; left: 500px; background-color: blue;}
+	
+	#footer{height: 100px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+
+	<div id="header">header (w - 1000px, h - 200px)</div>
+	<div id="container">
+		<div id="left">left(w - 300px, h - 900px)</div>
+		<div id="right">right(w - 600px, h - 900px)</div>
+	</div>
+	<div id="footer">footer (w - 1000px, h - 100px)</div>
+</div>
+</body>
+</html>

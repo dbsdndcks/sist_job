@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	let names = ['윤웅찬','진수현','홍성강','둘리','도라에몽','우노'];
+	//let names2 = ['김동섭','김무영','김병년',...names];
+	let names2 = ['김동섭','김무영','김병년'];
+
+	alert(names.indexOf("둘리"))
+	
+	//배열을 삭제 : splice(시작인덱스,삭제할방의수)
+	names.splice(3,2);
+	
+	document.write("<ul>")
+	for(let i=0 ; i < names.length ; i++){
+		document.write(`<li>${names[i]}</li>`);		
+	}
+	document.write("</ul>")
+	
+	//배열 합치기
+	names2.push(...names); //push로 추가하면 배열에 가장 마지막방으로 추가된다.
+	
+	document.write("합친배열<ul>")
+	for(let i=0 ; i < names2.length ; i++){
+		document.write(`<li>${names2[i]}</li>`);		
+	}
+	document.write("</ul>")
+</script>
+</head>
+<body>
+
+</body>
+</html>

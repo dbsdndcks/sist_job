@@ -1,0 +1,40 @@
+<%@page import="org.json.simple.JSONObject"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    info="AJAX에서 보내오는 parameter 받기"%>
+  
+<jsp:useBean id="lVO" class="" scope="page" />
+<jsp:setProperty property="*" name="lVO"/>
+<%
+//입력값에 대한 전처리,유효성검증
+wmVO.setEmail(wmVO.getEmail1()+wmVO.getEmail2());
+wmVO.setIp(request.getRemoteAddr());
+//일방향 HASH
+wmVO.setPassword(DataEncrypt.messageDigest("MD5", wmVO.getPassword()));
+//복호화 가능한 암호화 (이름,전번,이메일)
+String key ="DMF1ucDxtqgxw5niaXcmYQ==";
+
+DataEncrypt de = new DataEncrypt(key);
+wmVO.setName(de.encryption(wmVO.getName()));
+wmVO.setCell(de.encryption(wmVO.getCell()));
+wmVO.setEmail(de.encryption(wmVO.getEmail()));
+
+//세션에 값 설정
+session.setAttribute("loginData", wmVO);
+
+JSONObject jsonObj = new JSONObject();
+jsonObj.put("result", false);
+
+//DB TABLE 추가
+MemberDAO mDAO = MemberDAO.getInstance();
+
+try{
+	String existingId = mDAO.selectId(wmVO.getId());
+	if(existingId != null){
+	%>
+		입력하신 아이디는 이미사용중이다.	
+	<% 	
+	}else{
+	mDAO.insertWebMember(wmVO);		
+	}
+	%>

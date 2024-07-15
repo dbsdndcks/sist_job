@@ -1,0 +1,87 @@
+package course_prj_design.manager;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ * 학사일정관리 디자인 뷰
+ */
+
+
+@SuppressWarnings("serial")
+public class AcademicCalendar extends JFrame{
+
+	private JButton searchBtn,saveBtn,deleteBtn;
+	private JButton[] calBtn;
+	private JComboBox<Integer> yearCb,monthCb;
+	private DefaultComboBoxModel<Integer> yearCbm, monthCbm;
+	private JTextField memoJtf,timeJtf;
+	private JLabel yearJb, monthJb;
+	
+	String[] days = { "일", "월", "화", "수", "목", "금", "토" };
+	int year, month, day, todays, memoday = 0;
+	
+	public AcademicCalendar() {
+		Calendar today = Calendar.getInstance(); //달력 가져오기
+		Calendar cal = new GregorianCalendar(); // 표준 달력
+		year = today.get(Calendar.YEAR);
+		month = today.get(Calendar.MONTH)+1;
+		
+		//1998~2024년 까지 연도 콤보박스저장
+		yearCbm = new DefaultComboBoxModel<Integer>();
+		for(int i=1998 ; i < 2025; i++) {
+			yearCbm.addElement(i);
+		}
+		//1월~12월 까지 콤보박스 모델 저장		
+		monthCbm = new DefaultComboBoxModel<Integer>();
+		for(int i = 1 ; i < 13 ; i++) {
+			monthCbm.addElement(i);
+		}	
+		//콤보박스에 모델값 저장
+		yearCb = new JComboBox<Integer>(yearCbm);
+		monthCb = new JComboBox<Integer>(monthCbm);
+		
+		yearJb = new JLabel("년");
+		monthJb = new JLabel("월");
+		
+	      // 콤보박스와 레이블에 대한 최소 크기 설정
+        Dimension comboBoxDimension = new Dimension(80, 30); // 콤보박스 크기 설정
+        yearCb.setPreferredSize(comboBoxDimension); // 콤보박스에 최소 크기 설정
+        monthCb.setPreferredSize(comboBoxDimension); // 콤보박스에 최소 크기 설정
+        yearJb.setPreferredSize(new Dimension(20, 30)); // 레이블 크기 설정
+        monthJb.setPreferredSize(new Dimension(20, 30)); // 레이블 크기 설정
+		
+		JPanel calNorthJP = new JPanel();
+		calNorthJP.add(yearJb);
+		calNorthJP.add(yearCb);
+		calNorthJP.add(monthJb);
+		calNorthJP.add(monthCb);
+		
+		add(calNorthJP,"North");
+		BorderLayout blayout = new BorderLayout();
+		
+		setSize(800,800);
+		setVisible(true);
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		new AcademicCalendar();
+	}
+
+
+}

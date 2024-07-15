@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{width: 100px; height: 100px; border: 1px solid #333;
+	border-radius: 50px;}
+	.blue{background-color: deepskyblue;}
+	.red{background-color: red;}
+</style>
+<script type="text/javascript">
+	var birth = prompt("태어난해를 입력해주세요");
+	var date = new Date();
+	var nowYear = date.getFullYear();
+	console.log("나이는 " + (nowYear-birth+1) +"입니다");
+	
+	var sexsual = prompt("성별을 입력해주세요");
+	let bgColor = "red"
+	if(sexsual == "남" ||sexsual ==  "남자"){
+		bgColor = "blue"
+	}
+	document.write("<div class='" +bgColor+"'></div>")
+</script>
+</head>
+<body>
+	
+</body>
+</html>

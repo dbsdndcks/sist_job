@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{border : 1px solid #333;border-spacing: 0px;}
+	th,td{border: 1px solid #333;}
+	/*넓이가 800px이하의 설정*/
+	@media screen and (max-width:800px){
+		.color{ color: #ff0000;}
+		#img{display: none;}
+		#numtitle{width: 100px;}
+		#numtitle{width: 150px;}
+	}
+	@media screen and (min-width:800px){
+		.color{ color: #000fff;}
+		#numtitle{width: 200px;}
+		#numtitle{width: 300px;}
+	}
+	
+</style>
+</head>
+<body>
+	<div class="color">
+		브라우저 넓이가 색이 버아니렁라ㅣㄴ어리망러ㅣㅏ리ㅏㄴㅇ러ㅣㅏㄹ어ㅏ아아아아아ㅏ아아아앙
+		이이이이
+	</div>
+	<div id="img">
+		<img src="../common/images/KakaoTalk_20240312_113855813.jpg">
+	</div>
+	<table>
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>김일신</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>윤웅찬</td>
+		</tr>
+	</table>
+</body>
+</html>

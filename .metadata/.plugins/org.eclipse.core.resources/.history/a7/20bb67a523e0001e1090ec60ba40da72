@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>상대경로</h2>
+	<a href = "img.html">이미지</a><br/>
+	<a href = "../day0311/font.html">day0311/font.html과 연결</a><br/>
+	<a href = "../day0311/font.html">day0311/font.html과 연결</a><br/>
+</body>
+</html>

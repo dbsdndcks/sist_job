@@ -1,0 +1,19 @@
+package day0208;
+
+import java.net.Socket;
+
+/**
+ * 소켓을 생성하여 서버에 연결 하는일 
+ */
+public class TestClient {
+	//1. Socket 생성 ) 설정한 IP와 port로 서버에 연결
+	Socket client = new Socket("192.168.10.210",35000);
+	
+	public TestClient() {
+	}
+	
+	public static void main(String[] args) {
+		new TestClient();
+	}
+
+}

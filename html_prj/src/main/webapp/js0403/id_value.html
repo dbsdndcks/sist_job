@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	#output{color: red;}
+</style>
+<script type="text/javascript">
+	function getIdValue(){
+		var nameNode = document.getElementById("name");
+		var name = nameNode.value;
+		var age = document.getElementById("age").value;
+		
+		//이름이 입력되지 않으면 "이름 필수입력 호출하기"
+		if(name == ""){
+			alert("이름 필수 입력")
+			document.getElementById("output").innerHTML="이름필수입력!!!"
+			return;
+		}
+		if(age == ""){
+			alert("이름 필수 입력")
+			return;
+		}
+		
+		alert(name + "/" + age);			
+		/*HTML Form Contrl이 id 속성만 가지고 있다면 back-end에서 값을 받을 수 없다*/
+		document.getElementById("name").submit;
+	}
+</script>
+</head>
+<body>
+	
+<form action = "test.jsp">
+	<!--HTML Form Control이 name 속성을 가지지 안흔 경우 입력값이 back-end로 전송되지 안흔ㄴ다-->
+<label>이름</body>
+<input type="text" id="name"/><br/>
+<label>나이</body>
+<input type="text" id="age"/><br/>
+<input type="button" value="입력" onclick="getIdValue()"><br/>
+</form>
+
+</body>
+</html>

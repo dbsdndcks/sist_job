@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지</title>
+</head>
+<body>
+	<!--상대 경로: img를 가지고있는 html에서 필요한 URL부분 부터 사용-->
+	<img src="images/google_logo.webp/"><br/>
+	<img src="../common/images/google_logo.webp/"><br/>
+	
+	
+</body>
+</html>

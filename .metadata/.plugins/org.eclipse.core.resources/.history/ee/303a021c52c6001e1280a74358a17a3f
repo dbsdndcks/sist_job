@@ -1,0 +1,23 @@
+package day0208;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+public class TestURLEncoder {
+	//TCP Protocal을 사용하면 영어,숫자,특수문자인 1byte charset에 대해서는
+	//packet
+	
+	
+	public static void main(String[] args) {
+		
+		String str = "즐거운 설명절 되세요.";
+		System.out.println("원본 : " + str);
+		try {
+			String encode = URLEncoder.encode(str, "UTF-8");
+			System.out.println("인코딩된 : " + encode);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	}//main
+
+}//class

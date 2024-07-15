@@ -1,0 +1,14 @@
+package day0208;
+
+public class SimpleServer {
+
+	public void msgServer() {
+		
+	}
+	
+	public static void main(String[] args) {
+		SimpleServer ss = new SimpleServer();
+		ss.msgServer();
+	}//main
+
+}//class
